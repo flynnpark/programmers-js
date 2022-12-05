@@ -1,0 +1,16 @@
+name: Run test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: test
+        run: |
+          npm i
+          npm run test
