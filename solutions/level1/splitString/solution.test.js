@@ -2,21 +2,21 @@ import { solution } from './solution';
 
 const cases = [
   {
-    s: 'banana',
+    input: { s: 'banana' },
     result: 3,
   },
   {
-    s: 'abracadabra',
+    input: { s: 'abracadabra' },
     result: 6,
   },
   {
-    s: 'aaabbaccccabba',
+    input: { s: 'aaabbaccccabba' },
     result: 3,
   },
 ];
 
 test('문자열 나누기', () => {
-  cases.forEach(({ s, result }) => {
-    expect(solution(s) === result);
+  cases.forEach(({ input, result }) => {
+    expect(solution(...Object.values(input)) === result);
   });
 });
