@@ -16,7 +16,7 @@ const cases = [
   },
 ];
 
-test('디펜스 게임', () => {
+test('크레인 인형 뽑기 게임', () => {
   cases.forEach(({ input, result }) => {
     expect(solution(...Object.values(input)) === result);
   });
