@@ -1,4 +1,8 @@
 function solution(phone_number) {
-  let result = '';
-  return result;
+  return phone_number
+    .split('')
+    .map((item, index) => (index < phone_number.length - 4 ? '*' : item))
+    .join('');
 }
+
+export { solution };
