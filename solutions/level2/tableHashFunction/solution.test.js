@@ -19,6 +19,6 @@ const cases = [
 
 test('테이블 해시 함수', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

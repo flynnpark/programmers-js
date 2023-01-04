@@ -26,6 +26,6 @@ const cases = [
 
 test('크기가 작은 부분문자열', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

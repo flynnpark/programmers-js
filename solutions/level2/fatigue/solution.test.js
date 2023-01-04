@@ -16,6 +16,6 @@ const cases = [
 
 test('피로도', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

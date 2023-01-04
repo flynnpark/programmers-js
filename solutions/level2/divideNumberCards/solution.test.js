@@ -26,6 +26,6 @@ const cases = [
 
 test('숫자 카드 나누기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

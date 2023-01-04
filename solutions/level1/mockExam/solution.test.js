@@ -17,6 +17,6 @@ const cases = [
 
 test('모의고사', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

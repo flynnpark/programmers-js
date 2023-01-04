@@ -18,6 +18,6 @@ const cases = [
 
 test('크레인 인형 뽑기 게임', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

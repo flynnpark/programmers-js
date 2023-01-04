@@ -41,12 +41,12 @@ const cases = [
     input: {
       storey: 555,
     },
-    result: 15,
+    result: 14,
   },
 ];
 
 test('마법의 엘리베이터', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

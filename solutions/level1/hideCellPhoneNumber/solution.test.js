@@ -17,6 +17,6 @@ const cases = [
 
 test('핸드폰 번호 가리기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

@@ -28,6 +28,6 @@ const cases = [
 
 test('행렬의 덧셈', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

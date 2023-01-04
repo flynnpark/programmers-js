@@ -23,6 +23,6 @@ const cases = [
 
 test('가장 가까운 같은 글자', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

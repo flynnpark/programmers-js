@@ -11,6 +11,6 @@ const cases = [
 
 test('혼자 놀기의 달인', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });

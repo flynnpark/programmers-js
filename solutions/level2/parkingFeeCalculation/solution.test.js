@@ -42,6 +42,6 @@ const cases = [
 
 test('주차 요금 계산', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input)) === result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
