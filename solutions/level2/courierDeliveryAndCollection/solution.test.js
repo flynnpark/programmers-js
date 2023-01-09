@@ -19,6 +19,15 @@ const cases = [
     },
     result: 30,
   },
+  {
+    input: {
+      cap: 2,
+      n: 2,
+      deliveries: [0, 0],
+      pickups: [0, 4],
+    },
+    result: 8,
+  },
 ];
 
 test('택배 배달과 수거하기', () => {
