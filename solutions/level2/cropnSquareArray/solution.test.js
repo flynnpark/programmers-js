@@ -21,6 +21,6 @@ const cases = [
 
 test('n^2 배열 자르기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
