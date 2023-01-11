@@ -32,6 +32,6 @@ const cases = [
 
 test('개인정보 수집 유효기간', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
