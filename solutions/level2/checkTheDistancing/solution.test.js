@@ -17,6 +17,6 @@ const cases = [
 
 test('거리두기 확인하기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
