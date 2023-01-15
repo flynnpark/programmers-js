@@ -25,6 +25,6 @@ const cases = [
 
 test('삼각 달팽이', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
