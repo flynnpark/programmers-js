@@ -11,7 +11,6 @@ function isPrimeNumber(num) {
 
 function solution(nums) {
   let result = 0;
-  const sets = [];
 
   function dfs(prevSet, restNums) {
     if (prevSet.length === MAX_NUMS_LENGTH) {
