@@ -25,6 +25,12 @@ const cases = [
     },
     result: 0,
   },
+  {
+    input: {
+      s: '{{{{{{',
+    },
+    result: 0,
+  },
 ];
 
 test('괄호 회전하기', () => {
