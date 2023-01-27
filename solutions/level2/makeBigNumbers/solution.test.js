@@ -22,10 +22,17 @@ const cases = [
     },
     result: '775841',
   },
+  {
+    input: {
+      number: '4321',
+      k: 1,
+    },
+    result: '432',
+  },
 ];
 
 test('큰 수 만들기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toStrictEqual(result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });
