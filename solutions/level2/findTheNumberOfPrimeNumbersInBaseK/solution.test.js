@@ -19,6 +19,6 @@ const cases = [
 
 test('k진수에서 소수 개수 구하기', () => {
   cases.forEach(({ input, result }) => {
-    expect(solution(...Object.values(input))).toStrictEqual(result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });
