@@ -1,6 +1,8 @@
 function solution(orders, course) {
-  orders = orders.map((order) => order.split('').sort().join(''));
-  const combinationsArr = orders.map(getCombinations);
+  orders = orders.map((order) => order.split('').sort());
+  const combinationsArr = orders.map((order) =>
+    getCombinations([], [], order).map((item) => item.join(''))
+  );
 
   const counter = {};
   combinationsArr.forEach((combinations) => {
@@ -25,18 +27,13 @@ function solution(orders, course) {
   return result.sort();
 }
 
-function getCombinations(str) {
-  const fn = function (active, rest, a) {
-    if (!active && !rest) return;
-    if (!rest) {
-      a.push(active);
-    } else {
-      fn(active + rest[0], rest.slice(1), a);
-      fn(active, rest.slice(1), a);
-    }
-    return a;
-  };
-  return fn('', str, []);
+function getCombinations(result, path, rest) {
+  for (let i = 0; i < rest.length; i++) {
+    const currentPath = [...path, rest[i]];
+    result.push(currentPath);
+    getCombinations(result, currentPath, rest.slice(i + 1));
+  }
+  return result;
 }
 
 export { solution };
