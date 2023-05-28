@@ -39,7 +39,7 @@ const cases = [
 ];
 
 describe("숫자 짝꿍", () => {
-  test.each(testCases)("%o", ({ input, result }) => {
+  test.each(cases)("%o", ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
