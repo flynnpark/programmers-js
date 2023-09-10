@@ -33,8 +33,8 @@ const cases = [
   },
 ];
 
-test('괄호 회전하기', () => {
-  cases.forEach(({ input, result }) => {
+describe('괄호 회전하기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

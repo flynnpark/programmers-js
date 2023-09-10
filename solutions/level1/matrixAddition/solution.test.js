@@ -26,8 +26,8 @@ const cases = [
   },
 ];
 
-test('행렬의 덧셈', () => {
-  cases.forEach(({ input, result }) => {
+describe('행렬의 덧셈', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

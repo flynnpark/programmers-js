@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('명예의 전당 (1)', () => {
-  cases.forEach(({ input, result }) => {
+describe('명예의 전당 (1)', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

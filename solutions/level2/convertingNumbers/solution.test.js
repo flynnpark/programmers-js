@@ -27,8 +27,8 @@ const cases = [
   },
 ];
 
-test('숫자 변환하기', () => {
-  cases.forEach(({ input, result }) => {
+describe('숫자 변환하기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

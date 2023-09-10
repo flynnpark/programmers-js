@@ -19,8 +19,8 @@ const cases = [
   },
 ];
 
-test('비밀지도', () => {
-  cases.forEach(({ input, result }) => {
+describe('비밀지도', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

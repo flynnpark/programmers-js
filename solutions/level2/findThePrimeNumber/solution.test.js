@@ -15,8 +15,8 @@ const cases = [
   },
 ];
 
-test('소수 찾기', () => {
-  cases.forEach(({ input, result }) => {
+describe('소수 찾기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

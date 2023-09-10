@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('프린터', () => {
-  cases.forEach(({ input, result }) => {
+describe('프린터', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

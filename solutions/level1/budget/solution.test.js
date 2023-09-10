@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('예산', () => {
-  cases.forEach(({ input, result }) => {
+describe('예산', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

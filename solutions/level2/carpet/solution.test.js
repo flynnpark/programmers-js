@@ -24,8 +24,8 @@ const cases = [
   },
 ];
 
-test('카펫', () => {
-  cases.forEach(({ input, result }) => {
+describe('카펫', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

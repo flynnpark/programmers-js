@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('점 찍기', () => {
-  cases.forEach(({ input, result }) => {
+describe('점 찍기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

@@ -24,8 +24,8 @@ const cases = [
   },
 ];
 
-test('숫자 카드 나누기', () => {
-  cases.forEach(({ input, result }) => {
+describe('숫자 카드 나누기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

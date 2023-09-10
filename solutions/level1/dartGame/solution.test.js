@@ -45,8 +45,8 @@ const cases = [
   },
 ];
 
-test('다트 게임', () => {
-  cases.forEach(({ input, result }) => {
+describe('다트 게임', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

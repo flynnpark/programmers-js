@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('구명보트', () => {
-  cases.forEach(({ input, result }) => {
+describe('구명보트', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

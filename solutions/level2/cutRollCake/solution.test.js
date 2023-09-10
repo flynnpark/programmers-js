@@ -11,8 +11,8 @@ const cases = [
   },
 ];
 
-test('롤케이크 자르기', () => {
-  cases.forEach(({ input, result }) => {
+describe('롤케이크 자르기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

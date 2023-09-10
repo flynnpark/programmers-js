@@ -23,8 +23,8 @@ const cases = [
   },
 ];
 
-test('삼각 달팽이', () => {
-  cases.forEach(({ input, result }) => {
+describe('삼각 달팽이', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

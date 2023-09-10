@@ -9,8 +9,8 @@ const cases = [
   },
 ];
 
-test('H-Index', () => {
-  cases.forEach(({ input, result }) => {
+describe('H-Index', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

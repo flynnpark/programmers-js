@@ -15,8 +15,8 @@ const cases = [
   },
 ];
 
-test('핸드폰 번호 가리기', () => {
-  cases.forEach(({ input, result }) => {
+describe('핸드폰 번호 가리기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

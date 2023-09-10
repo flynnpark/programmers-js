@@ -14,8 +14,8 @@ const cases = [
   },
 ];
 
-test('피로도', () => {
-  cases.forEach(({ input, result }) => {
+describe('피로도', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

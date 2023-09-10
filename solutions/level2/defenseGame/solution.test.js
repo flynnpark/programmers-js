@@ -19,8 +19,8 @@ const cases = [
   },
 ];
 
-test('디펜스 게임', () => {
-  cases.forEach(({ input, result }) => {
+describe('디펜스 게임', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

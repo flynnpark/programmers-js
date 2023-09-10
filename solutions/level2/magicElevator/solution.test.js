@@ -45,8 +45,8 @@ const cases = [
   },
 ];
 
-test('마법의 엘리베이터', () => {
-  cases.forEach(({ input, result }) => {
+describe('마법의 엘리베이터', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

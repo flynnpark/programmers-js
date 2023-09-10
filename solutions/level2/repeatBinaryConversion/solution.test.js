@@ -21,8 +21,8 @@ const cases = [
   },
 ];
 
-test('이진 변환 반복하기', () => {
-  cases.forEach(({ input, result }) => {
+describe('이진 변환 반복하기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

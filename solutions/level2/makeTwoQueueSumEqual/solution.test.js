@@ -24,8 +24,8 @@ const cases = [
   },
 ];
 
-test('테이블 해시 함수', () => {
-  cases.forEach(({ input, result }) => {
+describe('테이블 해시 함수', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

@@ -24,8 +24,8 @@ const cases = [
   },
 ];
 
-test('메뉴 리뉴얼', () => {
-  cases.forEach(({ input, result }) => {
+describe('메뉴 리뉴얼', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

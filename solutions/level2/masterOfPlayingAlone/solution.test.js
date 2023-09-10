@@ -9,8 +9,8 @@ const cases = [
   },
 ];
 
-test('혼자 놀기의 달인', () => {
-  cases.forEach(({ input, result }) => {
+describe('혼자 놀기의 달인', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

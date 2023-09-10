@@ -16,8 +16,8 @@ const cases = [
   },
 ];
 
-test('크레인 인형 뽑기 게임', () => {
-  cases.forEach(({ input, result }) => {
+describe('크레인 인형 뽑기 게임', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

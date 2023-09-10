@@ -40,8 +40,8 @@ const cases = [
   },
 ];
 
-test('주차 요금 계산', () => {
-  cases.forEach(({ input, result }) => {
+describe('주차 요금 계산', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

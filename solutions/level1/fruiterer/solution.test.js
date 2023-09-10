@@ -19,8 +19,8 @@ const cases = [
   },
 ];
 
-test('과일 장수', () => {
-  cases.forEach(({ input, result }) => {
+describe('과일 장수', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

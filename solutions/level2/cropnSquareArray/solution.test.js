@@ -19,8 +19,8 @@ const cases = [
   },
 ];
 
-test('n^2 배열 자르기', () => {
-  cases.forEach(({ input, result }) => {
+describe('n^2 배열 자르기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

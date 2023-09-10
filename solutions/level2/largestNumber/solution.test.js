@@ -15,8 +15,8 @@ const cases = [
   },
 ];
 
-test('가장 큰 수', () => {
-  cases.forEach(({ input, result }) => {
+describe('가장 큰 수', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

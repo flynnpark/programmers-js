@@ -31,8 +31,8 @@ const cases = [
   },
 ];
 
-test('큰 수 만들기', () => {
-  cases.forEach(({ input, result }) => {
+describe('큰 수 만들기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

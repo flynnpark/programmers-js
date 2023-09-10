@@ -10,8 +10,8 @@ const cases = [
   },
 ];
 
-test('멀쩡한 사각형', () => {
-  cases.forEach(({ input, result }) => {
+describe('멀쩡한 사각형', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

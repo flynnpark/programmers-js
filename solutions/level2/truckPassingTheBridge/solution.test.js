@@ -27,8 +27,8 @@ const cases = [
   },
 ];
 
-test('다리를 지나는 트럭', () => {
-  cases.forEach(({ input, result }) => {
+describe('다리를 지나는 트럭', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });

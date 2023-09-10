@@ -17,8 +17,8 @@ const cases = [
   },
 ];
 
-test('k진수에서 소수 개수 구하기', () => {
-  cases.forEach(({ input, result }) => {
+describe('k진수에서 소수 개수 구하기', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
 });

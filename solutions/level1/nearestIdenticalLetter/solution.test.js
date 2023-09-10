@@ -21,8 +21,8 @@ const cases = [
   },
 ];
 
-test('가장 가까운 같은 글자', () => {
-  cases.forEach(({ input, result }) => {
+describe('가장 가까운 같은 글자', () => {
+  test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
