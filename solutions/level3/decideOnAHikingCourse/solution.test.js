@@ -72,6 +72,6 @@ const cases = [
 
 describe('등산코스 정하기', () => {
   test.each(cases)('%o', ({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
