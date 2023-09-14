@@ -17,6 +17,6 @@ const cases = [
 
 describe('숫자 타자 대회', () => {
   test.each(cases)('%o', ({ input, result }) => {
-    expect(solution(...Object.values(input))).toStrictEqual(result);
+    expect(solution(...Object.values(input))).toBe(result);
   });
 });
