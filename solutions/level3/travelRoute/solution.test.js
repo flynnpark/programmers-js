@@ -27,6 +27,6 @@ const cases = [
 
 describe('여행경로', () => {
   test.each(cases)('%o', ({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
