@@ -65,3 +65,27 @@
 ### 입출력 예 #2
 
 블록의 회전은 가능하지만, 뒤집을 수는 없습니다.
+
+## 문제 풀이
+
+- `game_board` 주어진 게임판
+- `table` 빈칸을 채울 수 있는 퍼즐 조각들이 존재하는 테이블
+
+BFS를 사용하여 `game_board`에서 퍼즐조각을 놓을 수 있는 빈 공간을 탐색하고, `table`에서는 BFS를 사용하여 퍼즐 조각을 탐색한다. `game_table`의 빈 공간에 딱 맞는 퍼즐 조각이 있다면 해당 퍼즐 조각의 넓이만큼 결과에 더해주면 된다. 단, 퍼즐 조각은 뒤집을 수는 없고 회전할 수는 있다.
+
+찾은 빈 공간과 퍼즐 조각이 일치하는지 여부를 확인하는지 위해서 2가지 헬퍼 함수를 작성했다. 한 가지는 좌표로 구한 도형들을 동일한 기준에 놓기 위한 `setBlockPositionAbsolutly` 함수이고, 다른 하나는 도형을 돌리기 위한 `spinBlock` 함수이다.
+
+```js
+function spinBlock(block) {
+  const rotatedBlock = block.map((vertex) => [vertex[1], -vertex[0]]);
+  return setBlockPositionAbsolutly(rotatedBlock);
+}
+
+function setBlockPositionAbsolutly(block) {
+  const minX = Math.min(...block.map((vertex) => vertex[0]));
+  const minY = Math.min(...block.map((vertex) => vertex[1]));
+  return block.map(([x, y]) => [x - minX, y - minY]).sort();
+}
+```
+
+마지막으로 해당 도형과 빈 공간이 같은지에 대한 비교는 `JSON.stringify`로 했다.
