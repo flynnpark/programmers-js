@@ -17,6 +17,6 @@ const cases = [
 
 describe('무인도 여행', () => {
   test.each(cases)('%o', ({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
