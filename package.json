@@ -18,16 +18,16 @@
   },
   "homepage": "https://github.com/flynnpark/programmers-js#readme",
   "devDependencies": {
-    "@babel/core": "^7.22.17",
-    "@babel/preset-env": "^7.22.15",
-    "@types/jest": "^29.5.4",
-    "babel-jest": "^29.6.4",
-    "eslint": "^8.49.0",
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@types/jest": "^29.5.10",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "jest": "^29.6.4",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3"
+    "jest": "^29.7.0",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0"
   }
 }
