@@ -15,7 +15,7 @@ const cases = [
   },
 ];
 
-describe('풍턴 터뜨리기', () => {
+describe('풍선 터뜨리기', () => {
   test.each(cases)('%o', ({ input, result }) => {
     expect(solution(...Object.values(input))).toBe(result);
   });
