@@ -28,6 +28,6 @@ const cases = [
 
 describe('우박수열 정적분', () => {
   test.each(cases)('%o', ({ input, result }) => {
-    expect(solution(...Object.values(input))).toBe(result);
+    expect(solution(...Object.values(input))).toStrictEqual(result);
   });
 });
